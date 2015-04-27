@@ -1,2 +1,2 @@
-### 1.0.1 - Released
+### 1.0.2 - Released
 * Initial release
