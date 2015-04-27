@@ -1,7 +1,8 @@
 ﻿namespace LiveReload
 
-    type Server(port: int option) =
-        
+    type Server(?port: int) =
+        let port = defaultArg port 35729
+
         let mutable started = false
         let mutable cancellationToken : System.Threading.CancellationTokenSource option = None
         let mutable connectionManager :  ConnectionManager option = None

@@ -27,7 +27,7 @@ module Program
                 r.Contents <- System.Action<System.IO.Stream> (fun s -> s.Write(textBytes, 0, textBytes.Length))
                 r :> obj
 
-    let live = new Server(None)
+    let live = new Server()
     let url = "http://localhost:8080"
     let host = new Nancy.Hosting.Self.NancyHost(System.Uri url)
     live.Start()

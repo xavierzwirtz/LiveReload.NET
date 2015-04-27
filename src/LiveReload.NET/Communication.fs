@@ -15,13 +15,6 @@ type internal ConnectionManager() =
         )
     member this.Connections with get() = lock this (fun () -> connections)
 
-/// Documentation for my library
-///
-/// ## Example
-///
-///     let h = Library.hello 1
-///     printfn "%d" h
-///
 module internal Communication = 
     open System.Net
     open System.Threading.Tasks
@@ -36,7 +29,6 @@ module internal Communication =
         let invalidRequest() =
             Some (sprintf "error: 'invalid message: %s'" message)
 
-        printfn "%s" message
         if message = null then
             None
         else
@@ -92,12 +84,8 @@ module internal Communication =
             startListener server connectionManager cancellationToken
         ), cancellationToken)
 
-    let start (port : int option) cancellationToken = 
-        let port = 
-            match port with 
-            | Some p -> p
-            | None -> 35729 //default live reload port
-
+    let start (port : int) cancellationToken = 
+        
         let server = new WebSocketListener(IPEndPoint(IPAddress.Any, port))
         let connManager = ConnectionManager()
 
