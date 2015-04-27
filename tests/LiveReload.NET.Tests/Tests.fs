@@ -1,10 +1,11 @@
-module LiveReload.NET.Tests
+module LiveReload.Tests
 
-open LiveReload.NET
+open LiveReload
 open NUnit.Framework
 
 [<Test>]
 let ``hello returns 42`` () =
-  let result = Library.hello 42
-  printfn "%i" result
-  Assert.AreEqual(42,result)
+    42
+//  let result = Server.hello 42
+//  printfn "%i" result
+//  Assert.AreEqual(42,result)
