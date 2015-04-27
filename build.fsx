@@ -323,7 +323,22 @@ Target "Release" (fun _ ->
     Branches.pushTag "" "origin" release.NugetVersion
     
     // release on github
-    createClient (getBuildParamOrDefault "github-user" "") (getBuildParamOrDefault "github-pw" "")
+    let user = getBuildParamOrDefault "github-user" ""
+    let pw = getBuildParamOrDefault "github-pw" ""
+
+    let user = 
+        if user = "" then 
+            printf "git username: "
+            Console.ReadLine()
+        else 
+            user
+    let pw = 
+        if pw = "" then 
+            printf "git password: "
+            Console.ReadLine()
+        else 
+            pw
+    createClient user pw
     |> createDraft gitOwner gitName release.NugetVersion (release.SemVer.PreRelease <> None) release.Notes 
     // TODO: |> uploadFile "PATH_TO_FILE"    
     |> releaseDraft
