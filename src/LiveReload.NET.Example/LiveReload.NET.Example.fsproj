@@ -54,7 +54,6 @@
     </Content>
     <None Include="Script.fsx" />
     <None Include="paket.references" />
-    <None Include="paket.template" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LiveReload.NET\LiveReload.NET.fsproj">
