@@ -18,6 +18,4 @@ tags
 summary
     Implements a LiveReload server for .NET
 description
-    Description not set
-
-
+    Implements a LiveReload server for .NET
