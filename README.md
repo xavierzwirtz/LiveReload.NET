@@ -1,5 +1,5 @@
-[![Issue Stats](http://issuestats.com/github/VoiceOfWisdom/LiveReload.NET/badge/issue)](http://issuestats.com/github/VoiceOfWisdom/LiveReload.NET)
-[![Issue Stats](http://issuestats.com/github/VoiceOfWisdom/LiveReload.NET/badge/pr)](http://issuestats.com/github/VoiceOfWisdom/LiveReload.NET)
+[![Issue Stats](http://issuestats.com/github/xavierzwirtz/LiveReload.NET/badge/issue)](http://issuestats.com/github/xavierzwirtz/LiveReload.NET)
+[![Issue Stats](http://issuestats.com/github/xavierzwirtz/LiveReload.NET/badge/pr)](http://issuestats.com/github/xavierzwirtz/LiveReload.NET)
 
 # LiveReload.NET
 
@@ -17,4 +17,4 @@ server.SendReload("css/app.css")
 
 ## Maintainer(s)
 
-- [@voiceofwisdom](https://github.com/voiceofwisdom)
+- [@xavierzwirtz](https://github.com/xavierzwirtz)
